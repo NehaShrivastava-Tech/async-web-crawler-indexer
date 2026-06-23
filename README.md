@@ -35,8 +35,8 @@ Modern search engines rely on highly efficient, concurrent workflows to map the 
  ┗ 📜 requirements.txt    # Production
 
 
-🏃 Getting Started & Local Installation
-Prerequisites
+## 🏃 **Getting Started & Local Installation
+Prerequisites**
 
 Make sure you have Python 3.8+ installed on your operating system.
 1. Clone the Repository
@@ -51,7 +51,7 @@ Run the core pipeline script to watch the crawler auto-discover pages and spin u
 
 python crawler.py
 
-🎯 Verification & Sample Run
+## 🎯 **Verification & Sample Run**
 
 Terminal Execution Trace:
 
@@ -71,7 +71,7 @@ Enter search keywords (or type 'exit'): tutorial functions
   2. [https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html)
 
 
-Generated Inverted Index Database Blueprint (index.json snippet):
+## **Generated Inverted Index Database Blueprint (index.json snippet):**
 
 {
     "tutorial": [
@@ -84,7 +84,7 @@ Generated Inverted Index Database Blueprint (index.json snippet):
 }
 
 
-💡 **System Design Key Takeaways (Interview Talking Points)**
+##💡 **System Design Key Takeaways (Interview Talking Points)**
 
 Network Fault Tolerance: The pipeline embeds custom try/except blocks around I/O pools to catch bad nodes or unexpected HTTP statuses (like 404 or 500 errors) gracefully without destabilizing the remaining execution stack.
 Polite Crawling Latency Caps: Includes automated asyncio.sleep routines between fetch operations to maintain polite rate limits against external server hosts.
