@@ -84,8 +84,10 @@ Generated Inverted Index Database Blueprint (index.json snippet):
 }
 
 
-💡 System Design Key Takeaways (Interview Talking Points)
+💡 System Design Key Takeaways
 
 Network Fault Tolerance: The pipeline embeds custom try/except blocks around I/O pools to catch bad nodes or unexpected HTTP statuses (like 404 or 500 errors) gracefully without destabilizing the remaining execution stack.
+
 Polite Crawling Latency Caps: Includes automated asyncio.sleep routines between fetch operations to maintain polite rate limits against external server hosts.
+
 Data Denormalization: Trade runtime storage memory space to optimize lookup velocity, reducing complex multi-document text scans down to direct key hash evaluations.
